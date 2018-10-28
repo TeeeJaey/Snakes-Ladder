@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
     RelativeLayout startPage;
     RelativeLayout gamePage;
+    RelativeLayout endPage;
+
     int redPlace = 1;
     int greenPlace = 1;
     int yellowPlace = 1;
@@ -31,11 +33,14 @@ public class MainActivity extends AppCompatActivity {
     float secondMove = 0f;
     float thirdMove = 0f;
 
+
     int run;
     int place;
     int chance = 0;
     int firstWinner = 5;
     int secondWinner = 5;
+    int thirdWinner = 5;
+    int fourthWinner = 5;
 
     float movex;
     float movey;
@@ -49,13 +54,18 @@ public class MainActivity extends AppCompatActivity {
     ImageView yellowImage;
     ImageView blueImage;
     ImageView dice;
-    
+
+
     ImageView boardImg;
     
     ImageView img;
     ImageView chanceImg;
 
     TextView chanceText;
+    TextView firstPlace;
+    TextView secondPlace;
+    TextView thirdPlace;
+    TextView fourthPlace;
 
     public void changeUser()
     {
@@ -80,9 +90,128 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        if (place == 100) {
+        if (place == 100)
+        {
             if(firstWinner<5 && secondWinner<5)
+            {
                 gameActive = false;
+                thirdWinner = chance;
+                switch (thirdWinner)
+                {
+                    case 0: {
+                        thirdPlace.setText("3) Red ");
+                        thirdPlace.setTextColor(Color.parseColor("#FF4444"));
+                        break;
+                    }
+                    case 1: {
+                        thirdPlace.setText("3) Green ");
+                        thirdPlace.setTextColor(Color.parseColor("#00FF00"));
+                        break;
+                    }
+                    case 2: {
+                        thirdPlace.setText("3) Yellow ");
+                        thirdPlace.setTextColor(Color.parseColor("#FFFF00"));
+                        break;
+                    }
+                    case 3: {
+                        thirdPlace.setText("3) Blue ");
+                        thirdPlace.setTextColor(Color.parseColor("#002AFF"));
+                        break;
+                    }
+                }
+
+                if(firstWinner==0)
+                {
+                    firstPlace.setText("1) Red ");
+                    firstPlace.setTextColor(Color.parseColor("#FF4444"));
+                    if(secondWinner==1)
+                    {
+                        secondPlace.setText("2) Green ");
+                        secondPlace.setTextColor(Color.parseColor("#00FF00"));
+                    }
+                    else if(secondWinner==2)
+                    {
+                        secondPlace.setText("2) Yellow ");
+                        secondPlace.setTextColor(Color.parseColor("#FFFF00"));
+                    }
+                    else if(secondWinner==3)
+                    {
+                        secondPlace.setText("2) Blue ");
+                        secondPlace.setTextColor(Color.parseColor("#002AFF"));
+                    }
+                }
+                else if(firstWinner==1)
+                {
+                    firstPlace.setText("1) Green ");
+                    firstPlace.setTextColor(Color.parseColor("#00FF00"));
+                    if(secondWinner==0)
+                    {
+                        secondPlace.setText("2) Red ");
+                        secondPlace.setTextColor(Color.parseColor("#FF4444"));
+                    }
+                    else if(secondWinner==2)
+                    {
+                        secondPlace.setText("2) Yellow ");
+                        secondPlace.setTextColor(Color.parseColor("#FFFF00"));
+                    }
+                    else if(secondWinner==3)
+                    {
+                        secondPlace.setText("2) Blue ");
+                        secondPlace.setTextColor(Color.parseColor("#002AFF"));
+                    }
+                }
+                else if(firstWinner==2)
+                {
+                    firstPlace.setText("1) Yellow ");
+                    firstPlace.setTextColor(Color.parseColor("#FFFF00"));
+                    if(secondWinner==0)
+                    {
+                        secondPlace.setText("2) Red ");
+                        secondPlace.setTextColor(Color.parseColor("#FF4444"));
+                    }
+                    else if(secondWinner==1)
+                    {
+                        secondPlace.setText("2) Green ");
+                        secondPlace.setTextColor(Color.parseColor("#00FF00"));
+                    }
+                    else if(secondWinner==3)
+                    {
+                        secondPlace.setText("2) Blue ");
+                        secondPlace.setTextColor(Color.parseColor("#002AFF"));
+                    }
+                }
+                else if(firstWinner==3)
+                {
+                    firstPlace.setText("1) Blue ");
+                    firstPlace.setTextColor(Color.parseColor("#002AFF"));
+                    if(secondWinner==0)
+                    {
+                        secondPlace.setText("2) Red ");
+                        secondPlace.setTextColor(Color.parseColor("#FF4444"));
+                    }
+                    else if(secondWinner==1)
+                    {
+                        secondPlace.setText("2) Green ");
+                        secondPlace.setTextColor(Color.parseColor("#00FF00"));
+                    }
+                    else if(secondWinner==2)
+                    {
+                        secondPlace.setText("2) Yellow ");
+                        secondPlace.setTextColor(Color.parseColor("#FFFF00"));
+                    }
+                }
+                if(max>2)
+                {
+                    thirdPlace.setText(" ");
+                    if(max>3)
+                        fourthPlace.setText(" ");
+                }
+                startPage.setVisibility(View.INVISIBLE);
+                gamePage.setVisibility(View.INVISIBLE);
+                endPage.setVisibility(View.VISIBLE);
+
+                this.recreate();
+            }
             else if(firstWinner<5)
                 secondWinner = chance;
             else
@@ -189,46 +318,48 @@ public class MainActivity extends AppCompatActivity {
             if (chance == max) chance = 0;
         }
 
-
-        switch (chance) {
-
+        
+        switch (chance)
+        {
             case 0: {
                 chanceText.setText("Red Play!");
                 chanceText.setTextColor(Color.parseColor("#FF4444"));
                 chanceImg.setImageResource(R.drawable.red);
+
+                fourthPlace.setText("4) Red ");
+                fourthPlace.setTextColor(Color.parseColor("#FF4444"));
                 break;
             }
             case 1: {
                 chanceText.setText("Green Play!");
                 chanceText.setTextColor(Color.parseColor("#00FF00"));
                 chanceImg.setImageResource(R.drawable.green);
+
+                fourthPlace.setText("4) Green ");
+                fourthPlace.setTextColor(Color.parseColor("#00FF00"));
                 break;
             }
             case 2: {
                 chanceText.setText("Yellow Play!");
                 chanceText.setTextColor(Color.parseColor("#FFFF00"));
                 chanceImg.setImageResource(R.drawable.yellow);
-                System.out.println("Yellow place: " + yellowPlace);
+
+                fourthPlace.setText("4) Yellow");
+                fourthPlace.setTextColor(Color.parseColor("#FFFF00"));
                 break;
             }
             case 3: {
                 chanceText.setText("Blue Play!");
                 chanceText.setTextColor(Color.parseColor("#002AFF"));
                 chanceImg.setImageResource(R.drawable.blue);
-                System.out.println("Blue place: " + bluePlace);
-                break;
 
+                fourthPlace.setText("4) Blue ");
+                fourthPlace.setTextColor(Color.parseColor("#002AFF"));
+                break;
             }
         }
 
-
-        dice.setOnClickListener( new View.OnClickListener()
-        {
-            public void onClick(View view)
-            {
-                play(dice);
-            }
-        });
+        dice.setClickable(true);
         return;
     }
 
@@ -399,13 +530,14 @@ public class MainActivity extends AppCompatActivity {
     public void play(View view)
     {
 
-        dice.setOnClickListener(null);
+        dice.setClickable(false);
         moveH = (float) ( boardImg.getWidth() * 79.5 / 900 );
         moveV = (float) ( boardImg.getHeight() * 72.25 / 900 );
 
         System.out.println("Board dim: "+boardImg.getWidth()+" , "+boardImg.getHeight());
-       // blueImage.animate().translationYBy(moveV*-9).setDuration(500);
-        if(gameActive) {
+
+        if(gameActive)
+        {
             Random rand = new Random();
             run = rand.nextInt(6) + 1;
             System.out.println("Run: " + run);
@@ -465,9 +597,8 @@ public class MainActivity extends AppCompatActivity {
             secondMove = 0f;
             thirdMove = 0f;
 
-            if ((place + run) <= 100) {
-                System.out.println("start : " + place);
-
+            if ((place + run) <= 100)
+            {
                 movex = 0;
                 movey = 0;
                 int start = place;
@@ -607,24 +738,28 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        public void start(View view)
-        {
+    public void start(View view)
+    {
 
-            max = Integer.parseInt(view.getTag().toString());
-            if (max==2)
-            {
-                yellowImage.setVisibility(View.INVISIBLE);
-                blueImage.setVisibility(View.INVISIBLE);
-            }
-            else if(max==3)
-            {
-                blueImage.setVisibility(View.INVISIBLE);
-            }
-            startPage.setVisibility(View.INVISIBLE);
-            gamePage.setVisibility(View.VISIBLE);
-
+        max = Integer.parseInt(view.getTag().toString());
+        if (max == 2) {
+            yellowImage.setVisibility(View.INVISIBLE);
+            blueImage.setVisibility(View.INVISIBLE);
+        } else if (max == 3) {
+            blueImage.setVisibility(View.INVISIBLE);
         }
+        startPage.setVisibility(View.INVISIBLE);
+        gamePage.setVisibility(View.VISIBLE);
 
+    }
+
+    public void restart(View view)
+    {
+        startPage.setVisibility(View.VISIBLE);
+        gamePage.setVisibility(View.INVISIBLE);
+        endPage.setVisibility(View.INVISIBLE);
+        this.recreate();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -632,8 +767,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        gamePage = (RelativeLayout) findViewById(R.id.GamePage);
         startPage = (RelativeLayout) findViewById(R.id.StartPage);
+        gamePage = (RelativeLayout) findViewById(R.id.GamePage);
+        endPage = (RelativeLayout) findViewById(R.id.EndPage);
+
         redImage = (ImageView) findViewById(R.id.red);
         greenImage = (ImageView) findViewById(R.id.green);
         yellowImage = (ImageView) findViewById(R.id.yellow);
@@ -642,8 +779,14 @@ public class MainActivity extends AppCompatActivity {
         dice = (ImageView) findViewById(R.id.dice);
 
         chanceText = (TextView) findViewById(R.id.chanceText);
+
+        firstPlace = (TextView) findViewById(R.id.firstPlace);
+        secondPlace = (TextView) findViewById(R.id.secondPlace);
+        thirdPlace = (TextView) findViewById(R.id.thirdPlace);
+        fourthPlace = (TextView) findViewById(R.id.fourthPlace);
+
         chanceImg = (ImageView) findViewById(R.id.chanceImg);
-    
+
         boardImg = (ImageView) findViewById(R.id.board);
     }
 }

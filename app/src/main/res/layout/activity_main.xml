@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:visibility="visible">
 
         <ImageView
             android:id="@+id/imageView"
@@ -149,6 +150,89 @@
             android:layout_marginBottom="15dp"
             android:layout_marginEnd="75dp"
             app:srcCompat="@drawable/red" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/EndPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/GameOver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="72dp"
+            android:fontFamily="serif"
+            android:text="Game Over"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@android:color/black"
+            android:textSize="50sp" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_centerInParent="true"
+            android:background="@android:color/background_light" />
+
+        <TextView
+            android:id="@+id/firstPlace"
+            android:layout_width="244dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="220dp"
+            android:text="1) Red"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/secondPlace"
+            android:layout_width="244dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/firstPlace"
+            android:layout_centerHorizontal="true"
+            android:text="2) Green"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/thirdPlace"
+            android:layout_width="244dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/secondPlace"
+            android:layout_centerHorizontal="true"
+            android:text="3) Yellow"
+            android:textColor="#fff000"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/fourthPlace"
+            android:layout_width="244dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/thirdPlace"
+            android:layout_centerHorizontal="true"
+            android:text="4) Blue"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/restart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="83dp"
+            android:elevation="0dp"
+            android:onClick="restart"
+            android:text="Restart Game"
+            android:textSize="20sp" />
 
     </RelativeLayout>
 
