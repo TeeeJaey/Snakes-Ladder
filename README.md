@@ -8,7 +8,7 @@
 
 ## Some screenshots ...
 ### Start page
-<img src="start.jpeg" height="400"  align="left" />
+<img src="start.jpeg" height="500"  />
 
 
 ### Different number of Players
