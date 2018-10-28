@@ -7,7 +7,7 @@
   - Android app developed on Android studio
 
 ## Some screenshots ...
-### Start page                                  Game over page
+### Start page and Game over page
 <img src="start.jpeg" height="500"  />
 
 
