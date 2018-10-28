@@ -7,13 +7,13 @@
   - Android app developed on Android studio
 
 ## Some screenshots ...
-### Start page
+### Start page                                  Game over page
 <img src="start.jpeg" height="500"  />
 
 
 ### Different number of Players
-<img src="twoPlayers.jpeg" height="400" align="left" />
-<img src="threePlayers.jpeg" height="400" align="left"  />
-<img src="fourPlayers.jpeg" height="400"   />
+<img src="twoPlayers.jpeg" height="500" align="left" />
+<img src="threePlayers.jpeg" height="500" align="left"  />
+<img src="fourPlayers.jpeg" height="500"   />
 
-### End of Game
+
