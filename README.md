@@ -8,13 +8,12 @@
 
 ## Some screenshots ...
 ### Start page
-<img src="Start.jpeg" height="500"  align="left" />
+<img src="start.jpeg" height="400"  align="left" />
 
 
 ### Different number of Players
-<img src="twoPlayers.jpeg" height="300" align="left" />
-
-<img src="threePlayers.jpeg" height="300"   />
-<img src="fourPlayers.jpeg" height="300"   />
+<img src="twoPlayers.jpeg" height="400" align="left" />
+<img src="threePlayers.jpeg" height="400" align="left"  />
+<img src="fourPlayers.jpeg" height="400"   />
 
 ### End of Game
