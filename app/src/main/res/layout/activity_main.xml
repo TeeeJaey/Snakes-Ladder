@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d6ffac"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/StartPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="74dp"
+            app:srcCompat="@drawable/snakeladder" />
+
+        <Button
+            android:id="@+id/twoPlayer"
+            android:layout_width="157dp"
+            android:layout_height="62dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="287dp"
+            android:onClick="start"
+            android:tag="2"
+            android:text="2 player"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/threePlayer"
+            android:layout_width="157dp"
+            android:layout_height="62dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="208dp"
+            android:onClick="start"
+            android:tag="3"
+            android:text="3 player"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/fourPlayer"
+            android:layout_width="157dp"
+            android:layout_height="62dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="127dp"
+            android:onClick="start"
+            android:tag="4"
+            android:text="4 player"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/GamePage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/board"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/board" />
+
+        <ImageView
+            android:id="@+id/dice"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="75dp"
+            android:onClick="play"
+            app:srcCompat="@drawable/dice1" />
+
+        <TextView
+            android:id="@+id/chanceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:text="Red Play!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="50sp" />
+
+        <ImageView
+            android:id="@+id/blue"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="165dp"
+            android:layout_marginLeft="17dp"
+            app:srcCompat="@drawable/blue" />
+
+        <ImageView
+            android:id="@+id/yellow"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="160dp"
+            android:layout_marginLeft="17dp"
+            app:srcCompat="@drawable/yellow" />
+
+        <ImageView
+            android:id="@+id/green"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="155dp"
+            android:layout_marginLeft="17dp"
+            app:srcCompat="@drawable/green" />
+
+        <ImageView
+            android:id="@+id/red"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="150dp"
+            android:layout_marginLeft="17dp"
+            app:srcCompat="@drawable/red" />
+
+        <ImageView
+            android:id="@+id/chanceImg"
+            android:layout_width="104dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="75dp"
+            app:srcCompat="@drawable/red" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
