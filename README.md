@@ -10,7 +10,7 @@
 ### Start page and Game over page
 <img src="start.jpeg" height="500" align="left" />
 <img src="end.jpeg" height="500"  />
-
+<hr>
 ### Different number of Players
 <img src="twoPlayers.jpeg" height="500" align="left" />
 <img src="threePlayers.jpeg" height="500" align="left"  />
