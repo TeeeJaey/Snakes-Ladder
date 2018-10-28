@@ -8,7 +8,7 @@
 
 ## Some screenshots ...
 ### Start page and Game over page
-<img src="start.jpeg" height="500"  />
+<img src="start.jpeg" height="500" alt="Start Page />
 
 
 ### Different number of Players
